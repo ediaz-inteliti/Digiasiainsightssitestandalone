@@ -1,0 +1,46 @@
+/* Fonts */
+
+/* Ideal Sans Book (Normal weight) */
+@font-face {
+  font-family: 'Ideal Sans';
+  src: url('https://dev-adb-digiasia.pantheonsite.io/themes/custom/digiasia_theme/fonts/IdealSans-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Ideal Sans Medium */
+@font-face {
+  font-family: 'Ideal Sans';
+  src: url('https://dev-adb-digiasia.pantheonsite.io/themes/custom/digiasia_theme/fonts/IdealSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Ideal Sans Semibold */
+@font-face {
+  font-family: 'Ideal Sans';
+  src: url('https://dev-adb-digiasia.pantheonsite.io/themes/custom/digiasia_theme/fonts/IdealSans-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Mercury Text G1 Roman */
+@font-face {
+  font-family: 'Mercury Text G1';
+  src: url('https://dev-adb-digiasia.pantheonsite.io/themes/custom/digiasia_theme/fonts/MercuryTextG1-Roman.otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Mercury Text G1 Bold */
+@font-face {
+  font-family: 'Mercury Text G1';
+  src: url('https://dev-adb-digiasia.pantheonsite.io/themes/custom/digiasia_theme/fonts/MercuryTextG1-Bold.otf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

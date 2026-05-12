@@ -1,0 +1,58 @@
+body {
+  --font-sans: 'Ideal Sans';
+  --font-headings: 'Ideal Sans';
+  --font-mercury: 'Mercury Text G1';
+  --font-mercury-bold: 'Mercury Text G1';
+  
+  --color-primary: rgb(0,37,105); /* ADB Primary main color */
+  --color-primary-dark: #004d99;
+  --color-secondary: #FBB00E;
+  --color-gray-50: #f8f9fa;
+  --color-gray-100: #e9ecef;
+  --color-gray-200: #dee2e6;
+  --color-gray-300: #ced4da;
+  --color-gray-400: #adb5bd;
+  --color-gray-600: #6c757d;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
+
+  font-family: var(--font-sans);
+  color: var(--color-gray-800);
+  line-height: 1.618;
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  font-family: var(--font-headings);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+}

@@ -1,0 +1,166 @@
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background: white;
+}
+
+.rainbow-separator {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    #e74c3c 0%,
+    #e74c3c 16.66%,
+    #f39c12 16.66%,
+    #f39c12 33.32%,
+    #f1c40f 33.32%,
+    #f1c40f 49.98%,
+    #2ecc71 49.98%,
+    #2ecc71 66.64%,
+    #3498db 66.64%,
+    #3498db 83.3%,
+    #9b59b6 83.3%,
+    #9b59b6 100%
+  );
+}
+
+.hero-content {
+  padding: 7.5rem 0;
+  /* background-image: url('https://s3-alpha.figma.com/checkpoints/d51/339/d023adc94b92c1acee9c699317f8e72c6f/d51339d023adc94b92c1acee9c699317f8e72c6f_2000.png'); */
+  background-image: url('https://i.imgur.com/Qd6Mbc0.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.hero-content:after {
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  display: block;
+  position: absolute;
+  z-index: 0;
+}
+.hero-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  max-width: 42rem;
+}
+
+.hero-title {
+  color: #f0f0f0;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  line-height: 1.25;
+  font-family: var(--font-mercury-bold);
+  font-weight: 700;
+}
+
+.hero-description {
+  color: #f0f0f0;
+  margin-bottom: 0;
+  font-size: 1.125rem;
+}
+
+/* Modules Section */
+.modules-section {
+  padding: 5rem 0;
+  background: var(--color-gray-50);
+}
+
+.modules-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-gray-900);
+}
+
+/* Module Cards Container - Centered */
+.modules-section .row {
+  justify-content: center;
+}
+
+/* Module Card */
+.module-card {
+  display: block;
+  background: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  padding: 8rem 2rem 1.5rem 2rem;
+  border: 1px solid white;
+  transition: border-color 0.3s;
+  margin-bottom: 1.5rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.module-card:after {
+  top: 0;
+  left: 0;
+  content: "";
+   border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left,rgba(0,0,0,0) 0%,#000000 100%);
+  display: block;
+  position: absolute;
+  z-index: 0;
+}
+.module-card.maps-card {
+  background-image: url('https://i.imgur.com/KkaZA3w.jpeg');
+  background-position: center 10%;
+}
+
+.module-card.indicators-card {
+  background-image: url('https://i.imgur.com/5X91aCL.jpeg');
+}
+
+.module-card.publications-card {
+  background-image: url('https://i.imgur.com/EvIK0eD.jpeg');
+}
+
+.module-card.inventory-card {
+  background-image: url('https://i.imgur.com/E1lwhO9.jpeg');
+  background-position: center 35%;
+}
+
+.module-card:hover {
+}
+
+.module-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  border-radius: 0.5rem;
+  margin: 0;
+}
+
+.module-header {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+}
+
+.module-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.module-title {
+  color: white;
+  margin-bottom: 0;
+}
+
+.module-description {
+  color: white;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}

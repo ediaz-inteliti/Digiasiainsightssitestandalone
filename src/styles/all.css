@@ -1,0 +1,6 @@
+@import "./fonts.css";
+@import "./flexboxgrid.css";
+@import "./globals.css";
+@import "./components/header.css";
+@import "./components/footer.css";
+@import "./pages/home.css";
