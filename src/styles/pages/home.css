@@ -1,33 +1,17 @@
 /* Hero Section */
 .hero-section {
   position: relative;
-  background: white;
+  background: var(--color-primary);
 }
 
-.rainbow-separator {
-  height: 4px;
-  width: 100%;
-  background: linear-gradient(
-    to right,
-    #e74c3c 0%,
-    #e74c3c 16.66%,
-    #f39c12 16.66%,
-    #f39c12 33.32%,
-    #f1c40f 33.32%,
-    #f1c40f 49.98%,
-    #2ecc71 49.98%,
-    #2ecc71 66.64%,
-    #3498db 66.64%,
-    #3498db 83.3%,
-    #9b59b6 83.3%,
-    #9b59b6 100%
-  );
-}
 
 .hero-content {
-  padding: 7.5rem 0;
-  /* background-image: url('https://s3-alpha.figma.com/checkpoints/d51/339/d023adc94b92c1acee9c699317f8e72c6f/d51339d023adc94b92c1acee9c699317f8e72c6f_2000.png'); */
-  background-image: url('https://i.imgur.com/Qd6Mbc0.jpeg');
+  min-height: 42vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 0 3.5rem;
+  background-image: url('../../assets/hero.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,7 +23,9 @@
   content: "";
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.45);
+  background:
+    linear-gradient(105deg, rgba(0, 4, 28, 0.95) 0%, rgba(0, 4, 28, 0.78) 40%, rgba(0, 4, 28, 0.12) 100%),
+    linear-gradient(to top, rgba(0, 4, 28, 0.88) 0%, rgba(0, 4, 28, 0) 52%);
   display: block;
   position: absolute;
   z-index: 0;
@@ -50,117 +36,201 @@
 }
 
 .hero-text {
-  max-width: 42rem;
+  max-width: none;
 }
 
 .hero-title {
-  color: #f0f0f0;
-  margin-bottom: 1rem;
-  font-size: 3rem;
-  line-height: 1.25;
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+  font-size: 3.5rem;
+  line-height: 1.12;
   font-family: var(--font-mercury-bold);
   font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.hero-rule {
+  width: 3rem;
+  height: 2px;
+  background: var(--color-secondary);
+  margin-bottom: 1.25rem;
 }
 
 .hero-description {
-  color: #f0f0f0;
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 0;
-  font-size: 1.125rem;
+  font-family: var(--font-mercury);
+  font-size: 1.25rem;
+  max-width: 44rem;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
 }
 
 /* Modules Section */
 .modules-section {
-  padding: 5rem 0;
-  background: var(--color-gray-50);
-}
-
-.modules-title {
-  text-align: center;
-  margin-bottom: 3rem;
-  color: var(--color-gray-900);
+  padding: 3rem 0 4rem;
+  background: var(--color-modules-bg);
 }
 
 /* Module Cards Container - Centered */
 .modules-section .row {
   justify-content: center;
+  align-items: stretch;
+}
+
+.modules-section .row > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.modules-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modules-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gray-600);
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.modules-description {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--color-gray-600);
+  letter-spacing: 0.01em;
+  line-height: 1.45;
+  text-align: right;
+  max-width: 44ch;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .modules-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .modules-description {
+    text-align: left;
+  }
 }
 
 /* Module Card */
 .module-card {
   display: block;
-  background: white;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border-radius: 0.5rem;
-  padding: 8rem 2rem 1.5rem 2rem;
-  border: 1px solid white;
-  transition: border-color 0.3s;
+  padding: 7rem 2rem 1.75rem 2rem;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
   margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.module-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
-  position: relative;
-}
-.module-card:after {
-  top: 0;
-  left: 0;
-  content: "";
-   border-radius: 0.5rem;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to left,rgba(0,0,0,0) 0%,#000000 100%);
-  display: block;
-  position: absolute;
+  background-repeat: no-repeat;
   z-index: 0;
+  will-change: transform;
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.module-card.maps-card {
-  background-image: url('https://i.imgur.com/KkaZA3w.jpeg');
+
+.module-card:hover::before,
+.module-card:focus-visible::before {
+  transform: scale(1.07);
+}
+
+.module-card:focus-visible {
+  outline-offset: 4px;
+  border-color: var(--color-secondary);
+}
+
+.module-card.maps-card::before {
+  background-image: url('../../assets/01_Digital_Reach_Map.png');
   background-position: center 10%;
 }
 
-.module-card.indicators-card {
-  background-image: url('https://i.imgur.com/5X91aCL.jpeg');
+.module-card.indicators-card::before {
+  background-image: url('../../assets/03_Development_Index.png');
 }
 
-.module-card.publications-card {
-  background-image: url('https://i.imgur.com/EvIK0eD.jpeg');
-}
-
-.module-card.inventory-card {
-  background-image: url('https://i.imgur.com/E1lwhO9.jpeg');
+.module-card.inventory-card::before {
+  background-image: url('../../assets/02_Capacity_Tracker.png');
   background-position: center 35%;
 }
 
-.module-card:hover {
+.module-card::after {
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 4, 28, 0.96) 0%, rgba(0, 4, 28, 0.62) 45%, rgba(0, 4, 28, 0.06) 100%);
+  display: block;
+  position: absolute;
+  z-index: 1;
 }
 
 .module-content {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding: 0;
-  border-radius: 0.5rem;
   margin: 0;
 }
 
 .module-header {
   display: flex;
-  flex-direction: row;
-  gap: 0.25rem;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
 }
 
-.module-icon {
-  width: 2rem;
-  height: 2rem;
+.module-number {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--color-secondary);
 }
 
 .module-title {
-  color: white;
+  color: var(--color-white);
   margin-bottom: 0;
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 .module-description {
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 0;
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
+  margin-top: 0;
+  font-family: var(--font-mercury);
+  font-size: 0.9375rem;
+  line-height: 1.55;
 }

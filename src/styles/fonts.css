@@ -30,7 +30,7 @@
 /* Mercury Text G1 Roman */
 @font-face {
   font-family: 'Mercury Text G1';
-  src: url('https://dev-adb-digiasia.pantheonsite.io/themes/custom/digiasia_theme/fonts/MercuryTextG1-Roman.otf');
+  src: url('https://dev-adb-digiasia.pantheonsite.io/themes/custom/digiasia_theme/fonts/MercuryTextG1-Roman.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -39,7 +39,7 @@
 /* Mercury Text G1 Bold */
 @font-face {
   font-family: 'Mercury Text G1';
-  src: url('https://dev-adb-digiasia.pantheonsite.io/themes/custom/digiasia_theme/fonts/MercuryTextG1-Bold.otf');
+  src: url('https://dev-adb-digiasia.pantheonsite.io/themes/custom/digiasia_theme/fonts/MercuryTextG1-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
