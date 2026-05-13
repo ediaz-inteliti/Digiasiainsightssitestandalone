@@ -3,7 +3,7 @@ body {
   --font-headings: 'Ideal Sans';
   --font-mercury: 'Mercury Text G1';
   --font-mercury-bold: 'Mercury Text G1';
-  
+
   --color-primary: rgb(0,37,105); /* ADB Primary main color */
   --color-primary-dark: #004d99;
   --color-secondary: #FBB00E;
@@ -17,12 +17,12 @@ body {
   --color-gray-800: #343a40;
   --color-gray-900: #212529;
   --color-white: #ffffff;
-  --color-modules-bg: #edf0f7;
+  --color-modules-bg: #e5eaf4;
 
   font-family: var(--font-sans);
   color: var(--color-gray-800);
   line-height: 1.618;
-  background: white;
+  background: var(--color-modules-bg);
   margin: 0;
   padding: 0;
 }
@@ -87,6 +87,19 @@ a {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Layout shell — flex column keeps footer anchored to bottom on any screen height */
+.site-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Main Content */

@@ -6,16 +6,17 @@
 
 
 .hero-content {
-  min-height: 42vh;
+  height: clamp(200px, 22vh, 250px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 2rem 0 3.5rem;
+  padding: 0.75rem 0 1.25rem;
   background-image: url('../../assets/hero.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
 }
 .hero-content:after {
   top: 0;
@@ -41,38 +42,40 @@
 
 .hero-title {
   color: var(--color-white);
-  margin-bottom: 1.25rem;
-  font-size: 3.5rem;
-  line-height: 1.12;
+  margin-bottom: 0.625rem;
+  font-size: 1.75rem;
+  line-height: 1.15;
   font-family: var(--font-mercury-bold);
   font-weight: 700;
   letter-spacing: -0.01em;
 }
 
 .hero-rule {
-  width: 3rem;
+  width: 2.5rem;
   height: 2px;
   background: var(--color-secondary);
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.625rem;
 }
 
 .hero-description {
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 0;
   font-family: var(--font-mercury);
-  font-size: 1.25rem;
+  font-size: 0.9375rem;
   max-width: 44rem;
+  line-height: 1.5;
 }
 
 @media (min-width: 768px) {
   .hero-title {
-    font-size: 4rem;
+    font-size: 2.25rem;
     line-height: 1.1;
   }
 }
 
 /* Modules Section */
 .modules-section {
+  flex: 1;
   padding: 3rem 0 4rem;
   background: var(--color-modules-bg);
 }
@@ -90,10 +93,17 @@
 
 .modules-header {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.modules-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-shrink: 0;
 }
 
 .modules-eyebrow {
@@ -102,27 +112,36 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-gray-600);
+  color: var(--color-primary);
   margin: 0;
-  flex-shrink: 0;
+}
+
+.modules-title {
+  font-family: var(--font-sans);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-primary);
+  margin: 0;
 }
 
 .modules-description {
   font-family: var(--font-sans);
   font-size: 0.8125rem;
   font-weight: 400;
-  color: var(--color-gray-600);
+  color: var(--color-gray-700);
   letter-spacing: 0.01em;
-  line-height: 1.45;
+  line-height: 1.5;
   text-align: right;
   max-width: 44ch;
   margin: 0;
+  padding-top: 0.25rem;
 }
 
 @media (max-width: 767px) {
   .modules-header {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
 
   .modules-description {

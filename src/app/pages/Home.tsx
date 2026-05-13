@@ -33,8 +33,11 @@ export default function Home() {
       <section className="modules-section">
         <div className="container">
           <div className="modules-header">
-            <p className="modules-eyebrow">Platform Modules</p>
-            <p className="modules-description">Select a module to explore data, maps and benchmarks for ADB's developing member countries.</p>
+            <div className="modules-header-left">
+              <p className="modules-eyebrow">Platform Modules</p>
+              <h2 className="modules-title">Three Integrated Tools</h2>
+            </div>
+            <p className="modules-description">Choose a module to access digital transformation insights across ADB's developing member countries.</p>
           </div>
           <div className="row">
                 {/* Digital Reach Map Module */}

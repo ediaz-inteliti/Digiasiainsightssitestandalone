@@ -8,7 +8,7 @@ export default function SiteTemplate({ children }: SiteTemplateProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div>
+    <div className="site-layout">
       {/* Skip Navigation */}
       <a href="#main-content" className="skip-nav">Skip to main content</a>
 
@@ -66,7 +66,7 @@ export default function SiteTemplate({ children }: SiteTemplateProps) {
       </header>
 
       {/* Main Content */}
-      <div id="main-content">
+      <div id="main-content" className="site-main">
         {children}
       </div>
 
@@ -76,7 +76,7 @@ export default function SiteTemplate({ children }: SiteTemplateProps) {
         <div className="container">
           <div className="row footer-columns">
             {/* digiASIA Identity Column */}
-            <div className="col-xs-12 col-lg-5 footer-brand-col">
+            <div className="col-xs-12 col-lg-7 footer-brand-col">
               <div className="footer-brand-logotype">
                 <span className="footer-brand-primary">digiASIA</span>
                 <span className="footer-brand-secondary">Insights Platform</span>
@@ -87,12 +87,9 @@ export default function SiteTemplate({ children }: SiteTemplateProps) {
             </div>
 
             {/* About ADB Section */}
-            <div className="col-xs-12 col-lg-7 footer-adb-col">
+            <div className="col-xs-12 col-lg-5 footer-adb-col">
               <h4 className="footer-heading">About ADB</h4>
               <div className="footer-content">
-                <p className="footer-text">
-                  ADB is a leading multilateral development bank supporting sustainable, inclusive, and resilient growth across Asia and the Pacific. Working with its members and partners to solve complex challenges together, ADB harnesses innovative financial tools and strategic partnerships to transform lives, build quality infrastructure, and safeguard our planet.
-                </p>
                 <p className="footer-text">
                   Learn more about ADB's work in the digital sector by visiting <a href="#" className="footer-link">Digital Technology in Asia and the Pacific</a>.
                 </p>
